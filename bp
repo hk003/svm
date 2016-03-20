@@ -1,0 +1,10 @@
+clear all;
+clc;
+%创建一个BP神经网络
+p=[3 2];
+t=[0.4 0.8];
+%确定误差向量角级视角
+wv=-4:0.4:4;bv=wv;
+%网络的神经元误差曲面
+ES=errsurf(p,t,wv,bv,'logsig');
+plotes(wv,bv,ES,[60 30])
